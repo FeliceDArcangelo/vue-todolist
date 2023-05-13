@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.done{
+    text-decoration: line-through;
+}
+
+.container{
+    max-width: 500px;
+    margin: auto;
+    padding: 2rem;
+}
+
+.container ul{
+    list-style: none;
+}

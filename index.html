@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="root">
+        <div class="container">
+            <h1>To Do List</h1>
+            <input v-model="newTodo" @keyup.enter="addTodo" placeholder="Add something to do">
+            <button @click="addTodo"> ADD</button>
+            <span v-show="tooShort">Devi inserire almeno 5 lettere</span>
+            <ul>
+                <li v-for="(todo, i) in arrTodo" :class="{'done': todo.done}">
+                    <span @click="deleteTodo" style="padding: .5rem; color: red;">x</span>
+                    <span @click="doIt(i)">{{ todo.text }}</span>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
